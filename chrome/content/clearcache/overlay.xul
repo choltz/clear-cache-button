@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://clearcache/skin/style.css" type="text/css"?>
+
+<!DOCTYPE overlay [
+<!ENTITY % overlayDTD SYSTEM "chrome://clearcache/locale/overlay.dtd">
+%overlayDTD;
+
+<!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd" >
+%browserDTD;
+
+<!ENTITY % globalRegionDTD SYSTEM "chrome://global-region/locale/region.dtd">
+%globalRegionDTD;
+]>
+
+<overlay id="clearcacheOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script src="overlay.js"/>
+
+    // Add toolbar button
+    <toolbarpalette id="BrowserToolbarPalette">
+
+    <toolbarbutton id="clearcache-toolbarbutton"
+                   class="toolbarbutton-1"
+                   oncommand="clearcachebutton_clearCache();"
+                   label="&clearcachebutton.labels.toolbarbutton;"
+                   tooltiptext="&clearcachebutton.labels.toolbarbutton;"/>
+    </toolbarpalette>
+
+</overlay>
+
