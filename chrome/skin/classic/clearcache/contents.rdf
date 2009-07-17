@@ -19,7 +19,7 @@
   </RDF:Seq>
 
   <RDF:Seq about="chrome://global/content/customizeToolbar.xul">
-    <RDF:li>chrome://clearcache/skin/style.css</RDF:li>
-  </RDF:Seq> 
+    <RDF:li>chrome://clearcache/skin/overlay.css</RDF:li>
+  </RDF:Seq>
 
 </RDF:RDF>

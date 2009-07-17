@@ -39,7 +39,6 @@
     </copy>
     <copy file="install.rdf" tofile="${build}/install.rdf"/>
     <copy file="install.locales" tofile="${build}/install.locales"/>
-    <copy file="install.js" tofile="${build}/install.js"/>
 
     <!-- Zip it all up into the final product -->
     <zip zipfile="${build}/clear_cache_button.xpi" basedir="${build}"/>
