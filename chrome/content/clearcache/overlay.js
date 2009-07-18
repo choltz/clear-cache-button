@@ -11,7 +11,7 @@ function clearcachebutton_clearCache()
     {
         cacheService.evictEntries(Components.interfaces.nsICache.STORE_ON_DISK);
         cacheService.evictEntries(Components.interfaces.nsICache.STORE_IN_MEMORY);
-        notify("Cache Cleared", "Cache has been cleared");
+        notify(localizedStrings.getString("clearcache.popupTitle"), localizedStrings.getString("clearcache.popupSuccess"));
     }
     catch(exception)
     {
