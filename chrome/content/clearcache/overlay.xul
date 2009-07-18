@@ -14,9 +14,18 @@
 
 <overlay id="clearcacheOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="cachebundle" src="chrome://clearcache/locale/clearcache.properties" />
+    </stringbundleset>
+
+<!--
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="cachebundle" src="chrome://browser/locale/downbar.properties"/>
+    </stringbundleset>
+-->
+
     <script src="overlay.js"/>
 
-    // Add toolbar button
     <toolbarpalette id="BrowserToolbarPalette">
 
     <toolbarbutton id="clearcache-toolbarbutton"

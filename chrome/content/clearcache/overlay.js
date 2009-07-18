@@ -5,6 +5,7 @@ function clearcachebutton_clearCache()
 {
     var cacheService     = getCacheService();
     var alertService     = Components.classes["@mozilla.org/alerts-service;1"].getService(Components.interfaces.nsIAlertsService);
+    var localizedStrings = document.getElementById("cachebundle");
 
     try
     {
