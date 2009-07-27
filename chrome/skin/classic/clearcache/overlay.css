@@ -1,9 +1,9 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #clearcache-toolbarbutton {
-	list-style-image: url("chrome://clearcache/skin/logo_32.png");
+        list-style-image: url("chrome://clearcache/skin/logo_32.png");
 }
 
 toolbar[iconsize="small"] #clearcache-toolbarbutton {
-	list-style-image: url("chrome://clearcache/skin/logo_24.png");
+        list-style-image: url("chrome://clearcache/skin/logo_22.png");
 }
