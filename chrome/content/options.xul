@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+  <dialog id             = "clearcache_options"
+          xmlns          = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          title          = "Clear cache button preferences"
+          buttons        = "accept,cancel"
+          ondialogaccept = "return savePreferences();"
+          ondialogcancel = "return true;"
+          onload         = "loadPreferences();"
+          persist        = "screenX screenY">
+
+  <checkbox id="clearcache_dialog" label="Show notification when clear cache button is pressed" />
+
+  <script type="application/x-javascript" src="chrome://clearcache/content/options.js" />
+</dialog>
+
