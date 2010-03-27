@@ -1,155 +1,153 @@
 <?xml version="1.0"?>
-
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>clearcache@coursevector.com</em:id>
+    <em:version>0.9c</em:version>
+    <em:type>2</em:type>
+    <em:optionsURL>chrome://clearcache/content/options.xul</em:optionsURL>
 
-	<Description about="urn:mozilla:install-manifest">
-		
-		<em:id>clearcache@coursevector.com</em:id>
-		<em:version>1.0</em:version>
-		<em:type>2</em:type>
-		
-		<em:localized>
-			<Description>
-				<em:locale>cs-CZ</em:locale>
-				<em:name>Vyprázdnit vyrovnávací paměť</em:name>
-				<em:description>Přidá tlačítko pro vyčištění vyrovnávací paměti</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>da-DK</em:locale>
-				<em:name>Ryd Cache</em:name>
-				<em:description>Tilføjer en Ryd Cache-knap til værktøjslinjen</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>de-DE</em:locale>
-				<em:name>Cache löschen</em:name>
-				<em:description>Fügt einen Cache löschen Symbolleisten Button hinzu</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>es-ES</em:locale>
-				<em:name>Limpiar la caché</em:name>
-				<em:description>Agrega un botón toolbar claro del caché</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>fr-FR</em:locale>
-				<em:name>Vide le cache</em:name>
-				<em:description>Ajoute un bouton \u00e0 la barre d'outils pour vider le cache.</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>hr-HR</em:locale>
-				<em:name>Očisti privremeni spremnik</em:name>
-				<em:description>Dodaje gumb alatne trake za čišćenje privremenog spremnika</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>hu-HU</em:locale>
-				<em:name>Gyorsítótár ürítése</em:name>
-				<em:description>Gyorsítótár ürítése az eszköztárra elhelyezett gomb segítségével</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>it-IT</em:locale>
-				<em:name>Svuota cache</em:name>
-				<em:description>Aggiunge un pulsante "Svuota cache" nella barra degli strumenti.</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>ko-KR</em:locale>
-				<em:name>Clear Cache</em:name>
-				<em:description>clear cache 도구막대 단추를 추가합니다.</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>nl-NL</em:locale>
-				<em:name>Cache wissen</em:name>
-				<em:description>Voegt een 'cache wissen' werkbalkknop toe</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>pt-BR</em:locale>
-				<em:name>Limpar Cache</em:name>
-				<em:description>Adiciona o botão "Clear Cache" na barra de ferramentas</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>ru-RU</em:locale>
-				<em:name>Очистить кэш</em:name>
-				<em:description>Добавляет кнопку очистки кэша</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>sk-SK</em:locale>
-				<em:name>Vymazať vyr. pamäť</em:name>
-				<em:description>Na panel nástrojov pridá tlačidlo určené na vymazanie vyrovnávacej pamäti.</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>tr-TR</em:locale>
-				<em:name>Önbelleği Temizle</em:name>
-				<em:description>Önbelleği temizleme araç çubuğu düğmesi ekler</em:description>
-			</Description>
-		</em:localized>
-		
-		<em:localized>
-			<Description>
-				<em:locale>tr-TR</em:locale>
-				<em:name>清除缓存</em:name>
-				<em:description>添加清除缓存工具栏按钮</em:description>
-			</Description>
-		</em:localized>
-		
-		<!-- Target Application this extension can install into, 
-		with minimum and maximum supported versions. --> 
-		
-		<!-- FireFox -->
-		<em:targetApplication>
-			<Description>
-				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-				<em:minVersion>1.5</em:minVersion>
-				<em:maxVersion>3.6.*</em:maxVersion>
-			</Description>
-		</em:targetApplication>
-		
-		<!-- Front End MetaData -->
-		<em:name>Clear Cache Button</em:name>
-		<em:description>Adds a button to the toolbar that clears the browser cache</em:description>
-		<em:creator>Christopher Holtz</em:creator>
-		<em:contributor>Gabriel Mariani</em:contributor>
-		<em:homepageURL>http://clearcachebutton.mozdev.org</em:homepageURL>
-		
-		<!-- Front End Integration Hooks (used by Extension Manager)-->
-		<em:iconURL>chrome://clearcache/skin/logo_32.png</em:iconURL>
-		
-	</Description>
+    <em:localized>
+      <Description>
+	<em:locale>cs-CZ</em:locale>
+	<em:name>Vyprázdnit vyrovnávací paměť</em:name>
+	<em:description>Přidá tlačítko pro vyčištění vyrovnávací paměti</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+	<em:locale>da-DK</em:locale>
+	<em:name>Ryd Cache</em:name>
+	<em:description>Tilføjer en Ryd Cache-knap til værktøjslinjen</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>de-DE</em:locale>
+	<em:name>Cache löschen</em:name>
+	<em:description>Fügt einen Cache löschen Symbolleisten Button hinzu</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>es-ES</em:locale>
+	<em:name>Limpiar la caché</em:name>
+	<em:description>Agrega un botón toolbar claro del caché</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>fr-FR</em:locale>
+	<em:name>Vide le cache</em:name>
+	<em:description>Ajoute un bouton \u00e0 la barre d'outils pour vider le cache.</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>hr-HR</em:locale>
+	<em:name>Očisti privremeni spremnik</em:name>
+	<em:description>Dodaje gumb alatne trake za čišćenje privremenog spremnika</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>hu-HU</em:locale>
+	<em:name>Gyorsítótár ürítése</em:name>
+	<em:description>Gyorsítótár ürítése az eszköztárra elhelyezett gomb segítségével</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>it-IT</em:locale>
+	<em:name>Svuota cache</em:name>
+	<em:description>Aggiunge un pulsante "Svuota cache" nella barra degli strumenti.</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>ko-KR</em:locale>
+	<em:name>Clear Cache</em:name>
+	<em:description>clear cache 도구막대 단추를 추가합니다.</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>nl-NL</em:locale>
+	<em:name>Cache wissen</em:name>
+	<em:description>Voegt een 'cache wissen' werkbalkknop toe</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>pt-BR</em:locale>
+	<em:name>Limpar Cache</em:name>
+	<em:description>Adiciona o botão "Clear Cache" na barra de ferramentas</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>ru-RU</em:locale>
+	<em:name>Очистить кэш</em:name>
+	<em:description>Добавляет кнопку очистки кэша</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>sk-SK</em:locale>
+	<em:name>Vymazať vyr. pamäť</em:name>
+	<em:description>Na panel nástrojov pridá tlačidlo určené na vymazanie vyrovnávacej pamäti.</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>tr-TR</em:locale>
+	<em:name>Önbelleği Temizle</em:name>
+	<em:description>Önbelleği temizleme araç çubuğu düğmesi ekler</em:description>
+      </Description>
+    </em:localized>
+    
+    <em:localized>
+      <Description>
+	<em:locale>tr-TR</em:locale>
+	<em:name>清除缓存</em:name>
+	<em:description>添加清除缓存工具栏按钮</em:description>
+      </Description>
+    </em:localized>
+    
+    <!-- Target Application this extension can install into, 
+	 with minimum and maximum supported versions. --> 
+    
+    <!-- FireFox -->
+    <em:targetApplication>
+      <Description>
+	<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+	<em:minVersion>2.0</em:minVersion>
+	<em:maxVersion>3.6.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
+    <!-- Front End MetaData -->
+    <em:name>Clear Cache Button</em:name>
+    <em:description>Adds a button to the toolbar that clears the browser cache</em:description>
+    <em:creator>Christopher Holtz</em:creator>
+    <em:contributor>Gabriel Mariani</em:contributor>
+    <em:homepageURL>http://clearcachebutton.mozdev.org</em:homepageURL>
+    
+    <!-- Front End Integration Hooks (used by Extension Manager)-->
+    <em:iconURL>chrome://clearcache/skin/logo_32.png</em:iconURL>
+    
+  </Description>
 </RDF>
