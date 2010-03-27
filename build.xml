@@ -14,31 +14,34 @@
     <mkdir dir="${build}"/>
 
     <!-- Copy chrome content (sans svn folders) to the build area -->
+    <!--
     <copy todir="${build}/chrome">
         <fileset dir="chrome">
             <exclude name="**/*.svn"/>
         </fileset>
     </copy>
+    --> 
 
     <!-- jar the chrome folder -->
-    <jar jarfile="${build}/clearcache.jar" basedir="${build}/chrome"/>
+    <!-- <jar jarfile="${build}/clearcache.jar" basedir="${build}/chrome"/> -->
 
     <!--
          delete the chrome folder (and it's contents), create a chrome folder
          and copy the jar file into it
     -->
+    <!-- 
     <delete dir="${build}/chrome" />
     <mkdir dir="${build}/chrome"/>
     <move file="${build}/clearcache.jar" tofile="${build}/chrome/clearcache.jar"/>
-
+    -->
     <!-- copy remaining content to the build folder -->
-    <copy todir="${build}/defaults">
-        <fileset dir="defaults">
-            <!-- <exclude name="**/*.svn"/> -->
+    <copy todir="${build}/chrome">
+        <fileset dir="chrome">
         </fileset>
     </copy>
     <copy file="install.rdf" tofile="${build}/install.rdf"/>
-    <copy file="install.locales" tofile="${build}/install.locales"/>
+    <!-- <copy file="install.locales" tofile="${build}/install.locales"/> -->
+    <copy file="chrome.manifest" tofile="${build}/chrome.manifest"/>
 
     <!-- Zip it all up into the final product -->
     <zip zipfile="${build}/clear_cache_button.xpi" basedir="${build}"/>

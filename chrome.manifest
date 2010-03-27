@@ -1,0 +1,5 @@
+content		clearcache				chrome/content/
+locale 		clearcache 	en-US 		chrome/locale/en-US/
+skin		clearcache	classic/1.0	chrome/skin/classic/
+overlay		chrome://browser/content/browser.xul			chrome://clearcache/content/overlay.xul
+style		chrome://global/content/customizeToolbar.xul	chrome://clearcache/skin/overlay.css
