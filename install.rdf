@@ -2,7 +2,7 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
-    <em:id>clearcache@coursevector.com</em:id>
+    <em:id>{563e4790-7e70-11da-a72b-0800200c9a66}</em:id>
     <em:version>0.9c</em:version>
     <em:type>2</em:type>
     <em:optionsURL>chrome://clearcache/content/options.xul</em:optionsURL>
