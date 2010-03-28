@@ -18,18 +18,18 @@ function clearcachebutton_clearcache()
         try
         {
           showNotification = prefs.getBoolPref("extension.clearcache.showNotification");
+
+          if (showNotification == true)
+          {
+            notify(loc.popupTitle, loc.successMessage);
+          }
         }
         catch(exception)
         {
-            // if there's an error - it's probably because the preference hasn't
-            // been set yet - so set it to the default behavior
-            prefs.setBoolPref("extension.clearcache.showNotification", true);
-            showNotification = true;
-        }
-
-        if (showNotification == true)
-        {
-          notify(loc.popupTitle, loc.successMessage);
+            // if there's an error it's likely because the preference value
+            // hasn't been set yet. If that's the case then show the
+            // preferences dialog
+            openDialog("chrome://clearcache/content/options.xul");
         }
     }
     catch(e)
