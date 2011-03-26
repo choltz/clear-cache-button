@@ -2,42 +2,6 @@ if(!com) var com={};
 if(!com.chrisholtz) com.chrisholtz={};
 
 //
-// Encapsulate localized string functionality in its own object.
-// Include fail-safes if local strings are not found
-//
-com.chrisholtz.localizedStrings = function()
-{
-    var public  = {};
-    var private = {};
-
-    // get the specificed string from the cache bundle. Trap error if property is not found
-    private.getString = function(key)
-    {
-        var loc   = document.getElementById("cachebundle");
-        var value = "";
-
-        try
-        {
-            value = loc.getString("extensions.{563e4790-7e70-11da-a72b-0800200c9a66}." + key);
-        }
-        catch(e) {} // If there is trouble retrieving the localized string, then we'll assign defaults
-
-        // assign defaults if there was a problem retrieving the string
-        if (value == "")
-        {
-            value = (key == "popupTitle" ? "Clear Cache" : "The cache has been cleared");
-        }
-
-        return value;
-    }
-
-    public.popupTitle     = private.getString("popupTitle");
-    public.successMessage = private.getString("popupSuccess");
-
-    return public
-}();
-
-//
 // Object to encapsulate clear cache behavior
 //
 com.chrisholtz.clearcache = function()
@@ -71,7 +35,7 @@ com.chrisholtz.clearcache = function()
             private.cacheService.evictEntries(Components.interfaces.nsICache.STORE_ON_DISK);
             private.cacheService.evictEntries(Components.interfaces.nsICache.STORE_IN_MEMORY);
 
-            var loc = com.chrisholtz.localizedStrings;
+            var loc = com.chrisholtz.clearcache.localizedStrings;
 
             // show the notification if the user hasn't yet set the
             // preference or they've explicitly enabled it
@@ -98,4 +62,40 @@ com.chrisholtz.clearcache = function()
     };
 
     return public;
+}();
+
+//
+// Encapsulate localized string functionality in its own object.
+// Include fail-safes if local strings are not found
+//
+com.chrisholtz.clearcache.localizedStrings = function()
+{
+    var public  = {};
+    var private = {};
+
+    // get the specificed string from the cache bundle. Trap error if property is not found
+    private.getString = function(key)
+    {
+        var loc   = document.getElementById("cachebundle");
+        var value = "";
+
+        try
+        {
+            value = loc.getString("extensions.{563e4790-7e70-11da-a72b-0800200c9a66}." + key);
+        }
+        catch(e) {} // If there is trouble retrieving the localized string, then we'll assign defaults
+
+        // assign defaults if there was a problem retrieving the string
+        if (value == "")
+        {
+            value = (key == "popupTitle" ? "Clear Cache" : "The cache has been cleared");
+        }
+
+        return value;
+    }
+
+    public.popupTitle     = private.getString("popupTitle");
+    public.successMessage = private.getString("popupSuccess");
+
+    return public
 }();
