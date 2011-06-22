@@ -1,17 +1,29 @@
+if(!com) var com={};
+if(!com.chrisholtz) com.chrisholtz={};
+if(!com.chrisholtz.clearcache) com.chrisholtz.clearcache={};
+
 //
-// Keeping things super simple. Just a couple functions to load and save preferences.
+// Object to encapsulate clear cache admin behavior
 //
-
-
-function savePreferences()
+com.chrisholtz.clearcache.admin = function()
 {
-    var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-    prefs.setBoolPref("extension.clearcache.showNotification", document.getElementById("clearcache_dialog").checked);
-}
+    var public          = {};
+    var private         = {};
+    private.preferences = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
 
-function loadPreferences()
-{
-    var prefs        = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
-    showNotification = prefs.getBoolPref("extension.clearcache.showNotification");
-    document.getElementById("clearcache_dialog").checked = showNotification;
-}
+    // save preferences from the options window
+    public.savePreferences = function()
+    {
+        private.preferences.setBoolPref("extension.clearcache.showNotification", document.getElementById("clearcache_dialog").checked);
+    }
+
+    // load preferences into the options window
+    public.loadPreferences = function()
+    {
+        showNotification = private.preferences.getBoolPref("extension.clearcache.showNotification");
+        document.getElementById("clearcache_dialog").checked = showNotification;
+    }
+
+    return public;
+}();
+

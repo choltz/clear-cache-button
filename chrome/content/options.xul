@@ -4,9 +4,9 @@
           xmlns          = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
           title          = "Clear cache button preferences"
           buttons        = "accept,cancel"
-          ondialogaccept = "return savePreferences();"
+          ondialogaccept = "return com.chrisholtz.clearcache.admin.savePreferences();"
           ondialogcancel = "return true;"
-          onload         = "loadPreferences();"
+          onload         = "com.chrisholtz.clearcache.admin.loadPreferences();"
           persist        = "screenX screenY">
 
   <checkbox id="clearcache_dialog" label="Show notification when clear cache button is pressed" />

@@ -10,7 +10,7 @@
   
   <menupopup id="menu_ToolsPopup">
     <menuitem id="clearcache-menubutton" insertafter="devToolsSeparator" accesskey="C" label="&clearcache.label;" 
-	      oncommand="clearcachebutton_clearcache();"/>
+	      oncommand="com.chrisholtz.clearcache.clearcache();"/>
   </menupopup>
   
   // Add toolbar button
@@ -18,7 +18,7 @@
     <toolbarbutton id="clearcache-toolbarbutton"
 		   insertbefore="print-button"
 		   class="toolbarbutton-1 chromeclass-toolbar-additional"
-		   oncommand="clearcachebutton_clearcache();"
+		   oncommand="com.chrisholtz.clearcache.clearcache();"
 		   label="&clearcache.label;"
 		   tooltiptext="&clearcache.label;"/>
   </toolbarpalette>
